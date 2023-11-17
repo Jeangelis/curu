@@ -54,9 +54,9 @@
         // Para adicionar shape, converter em geojson https://mapshaper.org/
 
         
-        L.geoJSON(waleson).addTo(map).bindPopup('<h2>Sítio São Vicente</h1><p><b>Proprietário:</b> Waleson Aparecido Loduvino Barros <br> <b>Área:</b> 5,3853 ha <br><b>Variação de altitude:</b> 800 a 990 m <br><b>Município:</b> Simonésia - Minas Gerais</p><img src ="img_waleson.JPG" style="width:300px">')
+        L.geoJSON(waleson).bindTooltip('Sítio São Vicente').addTo(map).bindPopup('<h2>Sítio São Vicente</h1><p><b>Proprietário:</b> Waleson Aparecido Loduvino Barros <br> <b>Área:</b> 5,3853 ha <br><b>Variação de altitude:</b> 800 a 990 m <br><b>Município:</b> Simonésia - Minas Gerais</p><img src ="img_waleson.JPG" style="width:300px">')
 
-        L.geoJSON(wanderlei).addTo(map).bindPopup('<h2>Sítio Ipê</h1><p><b>Proprietário:</b> Wanderlei Januário da Silva <br> <b>Área:</b> 4,5914 ha <br><b>Variação de altitude:</b> 1.220 a 1.360 m <br><b>Município:</b> Simonésia - Minas Gerais</p><img src ="img_wanderlei.JPG" style="width:300px">')
+        L.geoJSON(wanderlei).bindTooltip('Sítio Ipê').addTo(map).bindPopup('<h2>Sítio Ipê</h1><p><b>Proprietário:</b> Wanderlei Januário da Silva <br> <b>Área:</b> 4,5914 ha <br><b>Variação de altitude:</b> 1.220 a 1.360 m <br><b>Município:</b> Simonésia - Minas Gerais</p><img src ="img_wanderlei.JPG" style="width:300px">')
 
     </script>
 </body>
