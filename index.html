@@ -3,6 +3,11 @@
 <head>
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+    <link rel="stylesheet" href="Leaflet.Coordinates-master\Leaflet.Coordinates-master\dist\Leaflet.Coordinates-0.1.5.css"/>
+    <link rel="stylesheet" href="Leaflet.Coordinates-master\Leaflet.Coordinates-master\dist\Leaflet.Coordinates-0.1.5.ie.css"/>
+    <script src="Leaflet.Coordinates-master\Leaflet.Coordinates-master\dist\Leaflet.Coordinates-0.1.5.src.js"></script>
+
+    
     <script src="muda.js"></script>
     <script src="waleson.js"></script>
 
@@ -16,7 +21,7 @@
 <body>
     <div id = "map"></div>
     <script>
-        var map = L.map('map').setView([-20.031, -42.02], 17);
+        var map = L.map('map', { attributionControl:false}).setView([-20.031, -42.02], 17);
         var osm = L.tileLayer('https://api.maptiler.com/maps/satellite/{z}/{x}/{y}.jpg?key=up0bAfsERm51FL3XEQVL').addTo(map);
 
         var OpenStreetMapMapnik = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png');
@@ -66,6 +71,16 @@
 
         L.control.layers(baseMaps, overlayMaps).addTo(map);
 
+
+        //Coordinates
+
+        L.control.coordinates({
+            positio:"bottomleft",
+            useDMS:false,
+            //labelTemplateLat:"S {y}",
+            //labelTemplateLng:"W {x}",
+            useLatLngOrder:true
+        }).addTo(map);
 
     </script>
 </body>
